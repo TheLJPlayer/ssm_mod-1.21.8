@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "ssm_mod",
+	"version": "${version}",
+	"name": "Sandstone Items And Progression",
+	"description": "This mod recreates the custom items form Sandstone Server along with changing ore progression",
+	"authors": [
+		"TheLJPlayer"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/ssm_mod/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.theljplayer.ssm_mod.SandstoneItemsAndProgression"
+		],
+		"fabric-datagen": [
+			"net.theljplayer.ssm_mod.SandstoneItemsAndProgressionDataGenerator"
+		],
+      "client": [
+        "net.theljplayer.ssm_mod.SandstoneItemsAndProgressionClient"
+      ]
+	},
+	"mixins": [
+		"ssm_mod.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.21.8",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
