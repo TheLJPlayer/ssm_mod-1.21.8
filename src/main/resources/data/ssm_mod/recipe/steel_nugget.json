@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "ssm_mod:steel_ingot"
+  ],
+  "result": {
+    "count": 9,
+    "id": "ssm_mod:steel_nugget"
+  }
+}

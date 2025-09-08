@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "raw_steel_scrap",
+  "pattern": [
+    "XO",
+    "OX"
+  ],
+  "key": {
+    "X": [
+      "minecraft:iron_ingot"
+    ],
+    "O": "#minecraft:coals"
+  },
+  "result": {
+    "id": "ssm_mod:raw_steel_scrap",
+    "count": 1
+  }
+}

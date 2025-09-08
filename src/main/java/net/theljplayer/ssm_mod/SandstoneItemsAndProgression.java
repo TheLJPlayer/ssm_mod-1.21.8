@@ -2,6 +2,8 @@ package net.theljplayer.ssm_mod;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.theljplayer.ssm_mod.block.ModBlocks;
+import net.theljplayer.ssm_mod.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,6 +13,7 @@ public class SandstoneItemsAndProgression implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
+        ModItems.registerModItems();
+        ModBlocks.registerModBlocks();
 	}
 }

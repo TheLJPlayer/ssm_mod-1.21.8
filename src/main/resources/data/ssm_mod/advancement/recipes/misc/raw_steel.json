@@ -1,0 +1,24 @@
+{
+  "criteria": {
+    "raw_steel_scrap": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "ssm_mod:raw_steel_scrap"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "raw_steel_scrap"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ssm_mod:raw_steel"
+    ]
+  }
+}

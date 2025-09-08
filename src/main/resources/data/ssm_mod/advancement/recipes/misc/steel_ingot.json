@@ -1,0 +1,24 @@
+{
+  "criteria": {
+    "steel_nugget": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "ssm_mod:steel_nugget"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "steel_nugget"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ssm_mod:steel_ingot"
+    ]
+  }
+}

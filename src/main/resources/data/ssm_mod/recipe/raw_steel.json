@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "raw_steel",
+  "key": {
+    "#": "ssm_mod:raw_steel_scrap"
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "ssm_mod:raw_steel"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "criteria": {
+    "diamond_shard": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "ssm_mod:diamond_shard"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "diamond_shard"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ssm_mod:diamond"
+    ]
+  }
+}

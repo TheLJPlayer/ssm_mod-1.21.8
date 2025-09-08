@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "steel_ingot",
+  "key": {
+    "#": "ssm_mod:steel_nugget"
+  },
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "ssm_mod:steel_ingot"
+  }
+}

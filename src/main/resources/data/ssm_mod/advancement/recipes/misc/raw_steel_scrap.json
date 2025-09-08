@@ -1,0 +1,37 @@
+{
+  "criteria": {
+    "iron_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:iron_ingot"
+          }
+        ]
+      }
+    },
+    "coals": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "#minecraft:coals"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "iron_ingot"
+    ],
+    [
+      "coals"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ssm_mod:raw_steel_scrap"
+    ]
+  }
+}

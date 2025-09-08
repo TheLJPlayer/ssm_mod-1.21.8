@@ -1,0 +1,25 @@
+{
+  "criteria": {
+    "raw_steel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": "ssm_mod:raw_steel"
+          }
+        ]
+      }
+    }
+  },
+  "requirements": [
+    [
+      "raw_steel"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "ssm_mod:steel_nugget_from_blasting_raw_steel",
+      "ssm_mod:steel_nugget_from_smelting_raw_steel"
+    ]
+  }
+}
