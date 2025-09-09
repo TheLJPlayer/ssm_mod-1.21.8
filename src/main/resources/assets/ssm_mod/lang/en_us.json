@@ -5,5 +5,10 @@
   "item.ssm_mod.raw_steel_scrap": "Steel Scrap",
   "item.ssm_mod.raw_steel": "Raw Steel",
   "item.ssm_mod.steel_block": "Block of Steel",
-  "item.ssm_mod.raw_steel_block": "Block of Raw Steel"
+  "item.ssm_mod.raw_steel_block": "Block of Raw Steel",
+  "item.ssm_mod.steel_sword": "Steel Sword",
+  "item.ssm_mod.steel_axe": "Steel Axe",
+  "item.ssm_mod.steel_pickaxe": "Steel Pickaxe",
+  "item.ssm_mod.steel_shovel": "Steel Shovel",
+  "item.ssm_mod.steel_hoe": "Steel Hoe"
 }
