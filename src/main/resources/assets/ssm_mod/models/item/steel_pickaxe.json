@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/handheld",
   "textures": {
-    "layer0": "ssm:item/steel_pickaxe"
+    "layer0": "ssm_mod:item/steel_pickaxe"
   }
 }

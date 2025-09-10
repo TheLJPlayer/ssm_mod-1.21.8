@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:smithing_transform",
+  "base": "minecraft:iron_pickaxe",
+  "addition": "ssm_mod:steel_ingot",
+  "result": {
+    "id": "ssm_mod:steel_pickaxe"
+  }
+}

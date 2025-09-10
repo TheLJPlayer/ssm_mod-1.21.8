@@ -1,0 +1,14 @@
+{
+  "layers": {
+    "humanoid": [
+      {
+        "texture": "ssm_mod:steel"
+      }
+    ],
+    "humanoid_leggings": [
+      {
+        "texture": "ssm_mod:steel"
+      }
+    ]
+  }
+}

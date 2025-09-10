@@ -1,17 +1,17 @@
 package net.theljplayer.ssm_mod.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
-import net.minecraft.item.ToolMaterial;
+import net.minecraft.component.ComponentType;
+import net.minecraft.item.*;
+import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
-import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.util.Identifier;
 import net.theljplayer.ssm_mod.SandstoneItemsAndProgression;
-import net.theljplayer.ssm_mod.util.ModTags;
+import net.theljplayer.ssm_mod.datagen.ModBlockTagProvider;
+import net.theljplayer.ssm_mod.datagen.ModItemTagProvider;
 
 import java.util.function.Function;
 
@@ -19,12 +19,12 @@ public class ModItems {
 
     //Materials
     public static final ToolMaterial STEEL_TOOL_MATERIAL = new ToolMaterial(
-            ModTags.Blocks.INCORRECT_FOR_STEEL_TOOL,
+            ModBlockTagProvider.INCORRECT_FOR_STEEL_TOOL,
             1021,
             7,
             3,
             12,
-            ModTags.Items.STEEL_TOOL_MATERIAL
+            ModItemTagProvider.STEEL_TOOL_MATERIAL
     );
 
     //Items
@@ -35,11 +35,19 @@ public class ModItems {
     public static final Item STEEL_NUGGET = itemRegister("steel_nugget", Item::new, new Item.Settings());
     public static final Item RAW_STEEL_SCRAP = itemRegister("raw_steel_scrap", Item::new, new Item.Settings());
     public static final Item RAW_STEEL = itemRegister("raw_steel", Item::new, new Item.Settings());
-    public static final Item STEEL_SWORD = itemRegister("steel_sword", Item::new,new Item.Settings().sword(STEEL_TOOL_MATERIAL,4f, 1.4f));
-    public static final Item STEEL_AXE = itemRegister("steel_axe", Item::new,new Item.Settings().axe(STEEL_TOOL_MATERIAL, 6f,0.8f));
-    public static final Item STEEL_PICKAXE = itemRegister("steel_pickaxe", Item::new,new Item.Settings().pickaxe(STEEL_TOOL_MATERIAL,2f,1f));
-    public static final Item STEEL_SHOVEL = itemRegister("steel_shovel", Item::new,new Item.Settings().shovel(STEEL_TOOL_MATERIAL, 2f, 1f));
-    public static final Item STEEL_HOE = itemRegister("steel_hoe", Item::new,new Item.Settings().shovel(STEEL_TOOL_MATERIAL, 3f, 2f));
+
+    public static final Item STEEL_SWORD = itemRegister("steel_sword", Item::new,new Item.Settings().sword(STEEL_TOOL_MATERIAL,3f, -2.6f));
+    public static final Item STEEL_AXE = itemRegister("steel_axe", settings -> new AxeItem(STEEL_TOOL_MATERIAL, 5f, -3.4f, settings),new Item.Settings());
+    public static final Item STEEL_PICKAXE = itemRegister("steel_pickaxe", Item::new,new Item.Settings().pickaxe(STEEL_TOOL_MATERIAL,1f,-3f));
+    public static final Item STEEL_SHOVEL = itemRegister("steel_shovel", settings -> new ShovelItem(STEEL_TOOL_MATERIAL, 1f, -3f, settings),new Item.Settings());
+    public static final Item STEEL_HOE = itemRegister("steel_hoe", settings -> new HoeItem(STEEL_TOOL_MATERIAL, -3f, -3f, settings),new Item.Settings());
+
+    public static final Item STEEL_HELMET = itemRegister("steel_helmet", Item::new,new Item.Settings().armor(ModArmorMaterial.STEEL, EquipmentType.HELMET).maxDamage(EquipmentType.HELMET.getMaxDamage(ModArmorMaterial.BASE_DURABILITY)));
+    public static final Item STEEL_CHESTPLATE = itemRegister("steel_chestplate", Item::new,new Item.Settings().armor(ModArmorMaterial.STEEL, EquipmentType.CHESTPLATE).maxDamage(EquipmentType.CHESTPLATE.getMaxDamage(ModArmorMaterial.BASE_DURABILITY)));
+    public static final Item STEEL_LEGGINGS = itemRegister("steel_leggings", Item::new,new Item.Settings().armor(ModArmorMaterial.STEEL, EquipmentType.LEGGINGS).maxDamage(EquipmentType.LEGGINGS.getMaxDamage(ModArmorMaterial.BASE_DURABILITY)));
+    public static final Item STEEL_BOOTS = itemRegister("steel_boots", Item::new,new Item.Settings().armor(ModArmorMaterial.STEEL, EquipmentType.BOOTS).maxDamage(EquipmentType.BOOTS.getMaxDamage(ModArmorMaterial.BASE_DURABILITY)));
+
+    public static final Item STEEL_BATTLE_AXE = itemRegister("steel_battle_axe", settings -> new AxeItem(STEEL_TOOL_MATERIAL, 8f, -3.6f, settings),new Item.Settings().maxDamage(999));
 
     //Item Registries
     private static Item itemRegister(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
@@ -68,6 +76,11 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(fabricItemGroupEntries -> {
             fabricItemGroupEntries.add(STEEL_SWORD);
             fabricItemGroupEntries.add(STEEL_AXE);
+            fabricItemGroupEntries.add(STEEL_HELMET);
+            fabricItemGroupEntries.add(STEEL_CHESTPLATE);
+            fabricItemGroupEntries.add(STEEL_LEGGINGS);
+            fabricItemGroupEntries.add(STEEL_BOOTS);
+            fabricItemGroupEntries.add(STEEL_BATTLE_AXE);
         });
     }
 }

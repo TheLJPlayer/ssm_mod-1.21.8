@@ -1,8 +1,7 @@
 package net.theljplayer.ssm_mod.block;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
+import net.minecraft.block.*;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -21,6 +20,8 @@ public class ModBlocks {
     //Blocks
     public static final Block STEEL_BLOCK = blockRegister("steel_block", Block::new, AbstractBlock.Settings.create().sounds(BlockSoundGroup.IRON), true);
     public static final Block RAW_STEEL_BLOCK = blockRegister("raw_steel_block", Block::new, AbstractBlock.Settings.create().sounds(BlockSoundGroup.METAL), true);
+    public static final Block STEEL_DOOR = blockRegister("steel_door", properties -> new DoorBlock(BlockSetType.IRON, properties.requiresTool()), AbstractBlock.Settings.create().requiresTool(), true);
+    public static final Block STEEL_TRAPDOOR = blockRegister("steel_trapdoor", properties -> new TrapdoorBlock(BlockSetType.IRON, properties.requiresTool().nonOpaque()), AbstractBlock.Settings.create().requiresTool().nonOpaque(), true);
 
     //Block Registry
     private static Block blockRegister(String name, Function<AbstractBlock.Settings, Block> blockFactory, AbstractBlock.Settings settings, boolean shouldRegisterItem) {
@@ -51,6 +52,13 @@ public class ModBlocks {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(fabricItemGroupEntries -> {
             fabricItemGroupEntries.add(STEEL_BLOCK);
             fabricItemGroupEntries.add(RAW_STEEL_BLOCK);
+            fabricItemGroupEntries.add(STEEL_DOOR);
+            fabricItemGroupEntries.add(STEEL_TRAPDOOR);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.REDSTONE).register(fabricItemGroupEntries -> {
+            fabricItemGroupEntries.add(STEEL_DOOR);
+            fabricItemGroupEntries.add(STEEL_TRAPDOOR);
         });
     }
 }

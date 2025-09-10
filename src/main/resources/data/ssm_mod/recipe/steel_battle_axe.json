@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "steel_battle_axe",
+  "pattern": [
+    "##$",
+    "#s ",
+    "s  "
+  ],
+  "key": {
+    "#": [
+      "ssm_mod:steel_ingot"
+    ],
+    "s": [
+      "minecraft:stick"
+    ],
+    "$": [
+      "ssm_mod:steel_nugget"
+    ]
+  },
+  "result": {
+    "id": "ssm_mod:steel_battle_axe"
+  }
+}
