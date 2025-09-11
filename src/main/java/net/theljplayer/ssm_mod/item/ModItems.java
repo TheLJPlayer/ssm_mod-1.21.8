@@ -3,6 +3,7 @@ package net.theljplayer.ssm_mod.item;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.component.DataComponentTypes;
 import net.minecraft.component.type.AttributeModifierSlot;
+import net.minecraft.component.type.WeaponComponent;
 import net.minecraft.component.type.AttributeModifiersComponent;
 import net.minecraft.component.type.BlocksAttacksComponent;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
@@ -19,6 +20,7 @@ import net.minecraft.util.Identifier;
 import net.theljplayer.ssm_mod.SandstoneItemsAndProgression;
 import net.theljplayer.ssm_mod.datagen.ModBlockTagProvider;
 import net.theljplayer.ssm_mod.datagen.ModItemTagProvider;
+import net.theljplayer.ssm_mod.item.TerrashaperItem;
 
 import java.util.List;
 import java.util.Optional;
@@ -97,6 +99,17 @@ public class ModItems {
                     .component(DataComponentTypes.BREAK_SOUND, SoundEvents.ITEM_SHIELD_BREAK)
     );
 
+    public static final Item TERRASHAPER = itemRegister("terrashaper", 
+        settings -> new TerrashaperItem(ToolMaterial.IRON, 3f, -1f, settings),
+        new Item.Settings()
+            // .rarity(Rarity.RARE)
+            .maxDamage(250)
+            .attributeModifiers(TerrashaperItem.createAttributeModifiers())
+            .component(DataComponentTypes.TOOL, TerrashaperItem.createToolComponent())
+            .enchantable(1)
+            .component(DataComponentTypes.WEAPON, new WeaponComponent(1))
+    );
+
     //Item Registries
     private static Item itemRegister(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
         RegistryKey<Item> itemKey = RegistryKey.of(RegistryKeys.ITEM, Identifier.of(SandstoneItemsAndProgression.MOD_ID, name));
@@ -120,6 +133,7 @@ public class ModItems {
             fabricItemGroupEntries.add(STEEL_PICKAXE);
             fabricItemGroupEntries.add(STEEL_SHOVEL);
             fabricItemGroupEntries.add(STEEL_HOE);
+            fabricItemGroupEntries.add(TERRASHAPER);
         });
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(fabricItemGroupEntries -> {
             fabricItemGroupEntries.add(STEEL_SWORD);
