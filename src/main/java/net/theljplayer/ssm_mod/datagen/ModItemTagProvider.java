@@ -31,7 +31,8 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         valueLookupBuilder(ItemTags.SWORDS)
                 .add(ModItems.STEEL_SWORD);
         valueLookupBuilder(ItemTags.AXES)
-                .add(ModItems.STEEL_AXE);
+                .add(ModItems.STEEL_AXE)
+                .add(ModItems.STEEL_BATTLE_AXE);
         valueLookupBuilder(ItemTags.PICKAXES)
                 .add(ModItems.STEEL_PICKAXE);
         valueLookupBuilder(ItemTags.SHOVELS)

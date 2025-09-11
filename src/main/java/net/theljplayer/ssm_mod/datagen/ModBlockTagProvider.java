@@ -10,6 +10,7 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.registry.tag.TagKey;
 import net.minecraft.util.Identifier;
 import net.theljplayer.ssm_mod.SandstoneItemsAndProgression;
+import net.theljplayer.ssm_mod.block.ModBlocks;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -32,5 +33,10 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .forceAddTag(BlockTags.NEEDS_IRON_TOOL)
                 .add(Blocks.OBSIDIAN)
                 .add(Blocks.CRYING_OBSIDIAN);
+        valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.STEEL_BLOCK)
+                .add(ModBlocks.STEEL_DOOR)
+                .add(ModBlocks.STEEL_TRAPDOOR)
+                .add(ModBlocks.RAW_STEEL_BLOCK);
     }
 }

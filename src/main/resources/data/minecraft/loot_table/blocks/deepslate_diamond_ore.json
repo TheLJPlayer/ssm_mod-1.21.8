@@ -9,7 +9,7 @@
           "children": [
             {
               "type": "minecraft:item",
-              "name": "minecraft:diamond",
+              "name": "ssm_mod:diamond_shard",
               "functions": [
                 {
                   "function": "minecraft:set_count",

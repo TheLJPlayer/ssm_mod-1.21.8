@@ -27,7 +27,8 @@ public class ModArmorMaterial {
                     EquipmentType.HELMET, 3,
                     EquipmentType.CHESTPLATE, 7,
                     EquipmentType.LEGGINGS, 5,
-                    EquipmentType.BOOTS, 3
+                    EquipmentType.BOOTS, 3,
+                    EquipmentType.BODY, 7
             ),
             12,
             SoundEvents.ITEM_ARMOR_EQUIP_IRON,

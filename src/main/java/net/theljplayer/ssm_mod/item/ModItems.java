@@ -1,18 +1,27 @@
 package net.theljplayer.ssm_mod.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
-import net.minecraft.component.ComponentType;
+import net.minecraft.component.DataComponentTypes;
+import net.minecraft.component.type.AttributeModifierSlot;
+import net.minecraft.component.type.AttributeModifiersComponent;
+import net.minecraft.component.type.BlocksAttacksComponent;
+import net.minecraft.entity.attribute.EntityAttributeModifier;
+import net.minecraft.entity.attribute.EntityAttributes;
 import net.minecraft.item.*;
 import net.minecraft.item.equipment.EquipmentType;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
+import net.minecraft.registry.tag.DamageTypeTags;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.theljplayer.ssm_mod.SandstoneItemsAndProgression;
 import net.theljplayer.ssm_mod.datagen.ModBlockTagProvider;
 import net.theljplayer.ssm_mod.datagen.ModItemTagProvider;
 
+import java.util.List;
+import java.util.Optional;
 import java.util.function.Function;
 
 public class ModItems {
@@ -20,7 +29,7 @@ public class ModItems {
     //Materials
     public static final ToolMaterial STEEL_TOOL_MATERIAL = new ToolMaterial(
             ModBlockTagProvider.INCORRECT_FOR_STEEL_TOOL,
-            1021,
+            821,
             7,
             3,
             12,
@@ -37,7 +46,7 @@ public class ModItems {
     public static final Item RAW_STEEL = itemRegister("raw_steel", Item::new, new Item.Settings());
 
     public static final Item STEEL_SWORD = itemRegister("steel_sword", Item::new,new Item.Settings().sword(STEEL_TOOL_MATERIAL,3f, -2.6f));
-    public static final Item STEEL_AXE = itemRegister("steel_axe", settings -> new AxeItem(STEEL_TOOL_MATERIAL, 5f, -3.4f, settings),new Item.Settings());
+    public static final Item STEEL_AXE = itemRegister("steel_axe", settings -> new AxeItem(STEEL_TOOL_MATERIAL, 5f, -3.2f, settings),new Item.Settings());
     public static final Item STEEL_PICKAXE = itemRegister("steel_pickaxe", Item::new,new Item.Settings().pickaxe(STEEL_TOOL_MATERIAL,1f,-3f));
     public static final Item STEEL_SHOVEL = itemRegister("steel_shovel", settings -> new ShovelItem(STEEL_TOOL_MATERIAL, 1f, -3f, settings),new Item.Settings());
     public static final Item STEEL_HOE = itemRegister("steel_hoe", settings -> new HoeItem(STEEL_TOOL_MATERIAL, -3f, -3f, settings),new Item.Settings());
@@ -47,7 +56,46 @@ public class ModItems {
     public static final Item STEEL_LEGGINGS = itemRegister("steel_leggings", Item::new,new Item.Settings().armor(ModArmorMaterial.STEEL, EquipmentType.LEGGINGS).maxDamage(EquipmentType.LEGGINGS.getMaxDamage(ModArmorMaterial.BASE_DURABILITY)));
     public static final Item STEEL_BOOTS = itemRegister("steel_boots", Item::new,new Item.Settings().armor(ModArmorMaterial.STEEL, EquipmentType.BOOTS).maxDamage(EquipmentType.BOOTS.getMaxDamage(ModArmorMaterial.BASE_DURABILITY)));
 
-    public static final Item STEEL_BATTLE_AXE = itemRegister("steel_battle_axe", settings -> new AxeItem(STEEL_TOOL_MATERIAL, 8f, -3.6f, settings),new Item.Settings().maxDamage(999));
+    public static final Item STEEL_BATTLE_AXE = itemRegister("steel_battle_axe", Item::new,
+            new Item.Settings()
+                    .axe(ModItems.STEEL_TOOL_MATERIAL, 8f, -3.4f)
+                    .maxDamage(999)
+                    .component(DataComponentTypes.ATTRIBUTE_MODIFIERS,
+                            AttributeModifiersComponent.builder().add(
+                                    EntityAttributes.MOVEMENT_SPEED,
+                                    new EntityAttributeModifier(
+                                            Identifier.ofVanilla("movement_speed"),
+                                            -0.2f,EntityAttributeModifier.Operation.ADD_MULTIPLIED_BASE),
+                                    AttributeModifierSlot.HAND)
+                                    .add(
+                                            EntityAttributes.ATTACK_DAMAGE,
+                                            new EntityAttributeModifier(
+                                                    Identifier.ofVanilla("attack_damage"),
+                                                    11f,
+                                                    EntityAttributeModifier.Operation.ADD_VALUE),
+                                            AttributeModifierSlot.MAINHAND)
+                                    .add(
+                                            EntityAttributes.ATTACK_SPEED,
+                                            new EntityAttributeModifier(
+                                                    Identifier.ofVanilla("attack_speed"),
+                                                    -3.4f,
+                                                    EntityAttributeModifier.Operation.ADD_VALUE),
+                                            AttributeModifierSlot.MAINHAND)
+                                    .build())
+                    .component(
+                            DataComponentTypes.BLOCKS_ATTACKS,
+                            new BlocksAttacksComponent(
+                                    0,
+                                    1.0F,
+                                    List.of(new BlocksAttacksComponent.DamageReduction(30.0F, Optional.empty(), 1.0F, 3.0F)),
+                                    new BlocksAttacksComponent.ItemDamage(9.0F, 1.0F, 1.0F),
+                                    Optional.of(DamageTypeTags.BYPASSES_SHIELD),
+                                    Optional.of(SoundEvents.ITEM_SHIELD_BLOCK),
+                                    Optional.of(SoundEvents.ITEM_SHIELD_BREAK)
+                            )
+                    )
+                    .component(DataComponentTypes.BREAK_SOUND, SoundEvents.ITEM_SHIELD_BREAK)
+    );
 
     //Item Registries
     private static Item itemRegister(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
