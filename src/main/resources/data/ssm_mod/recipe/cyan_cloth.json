@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "cloth",
+  "pattern": [
+    "XO",
+    "OX"
+  ],
+  "key": {
+    "X": [
+      "minecraft:cyan_wool"
+    ],
+    "O": "minecraft:string"
+  },
+  "result": {
+    "id": "ssm_mod:cyan_cloth",
+    "count": 1
+  }
+}

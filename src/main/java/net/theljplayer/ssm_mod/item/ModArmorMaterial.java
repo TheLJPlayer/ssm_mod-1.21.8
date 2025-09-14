@@ -17,12 +17,13 @@ import java.util.Map;
 
 public class ModArmorMaterial {
 
-    public static final int BASE_DURABILITY = 24;
+    public static final int STEEL_DURABILITY = 24;
+    public static final int CLOTH_DURABILITY = 24;
 
     public static final RegistryKey<EquipmentAsset> STEEL_ARMOR_MATERIAL_KEY = RegistryKey.of(EquipmentAssetKeys.REGISTRY_KEY, Identifier.of(SandstoneItemsAndProgression.MOD_ID, "steel"));
 
     public static final ArmorMaterial STEEL = new ArmorMaterial(
-            BASE_DURABILITY,
+            STEEL_DURABILITY,
             Map.of(
                     EquipmentType.HELMET, 3,
                     EquipmentType.CHESTPLATE, 7,
@@ -36,5 +37,24 @@ public class ModArmorMaterial {
             1.0F,
             ModItemTagProvider.REPAIRS_STEEL_ARMOR,
             STEEL_ARMOR_MATERIAL_KEY
+    );
+
+    public static final RegistryKey<EquipmentAsset> CLOTH_ARMOR_MATERIAL_KEY = RegistryKey.of(EquipmentAssetKeys.REGISTRY_KEY, Identifier.of(SandstoneItemsAndProgression.MOD_ID, "cloth"));
+
+    public static final ArmorMaterial CLOTH = new ArmorMaterial(
+            CLOTH_DURABILITY,
+            Map.of(
+                    EquipmentType.HELMET, 3,
+                    EquipmentType.CHESTPLATE, 7,
+                    EquipmentType.LEGGINGS, 5,
+                    EquipmentType.BOOTS, 3,
+                    EquipmentType.BODY, 7
+            ),
+            12,
+            SoundEvents.ITEM_ARMOR_EQUIP_LEATHER,
+            1.0F,
+            1.0F,
+            ModItemTagProvider.REPAIRS_STEEL_ARMOR,
+            CLOTH_ARMOR_MATERIAL_KEY
     );
 }

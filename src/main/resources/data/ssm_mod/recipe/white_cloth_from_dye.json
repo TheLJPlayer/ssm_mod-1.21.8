@@ -1,0 +1,29 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "cloth",
+  "ingredients": [
+    [
+      "ssm_mod:yellow_cloth",
+      "ssm_mod:red_cloth",
+      "ssm_mod:purple_cloth",
+      "ssm_mod:pink_cloth",
+      "ssm_mod:orange_cloth",
+      "ssm_mod:magenta_cloth",
+      "ssm_mod:lime_cloth",
+      "ssm_mod:light_gray_cloth",
+      "ssm_mod:light_blue_cloth",
+      "ssm_mod:green_cloth",
+      "ssm_mod:gray_cloth",
+      "ssm_mod:cyan_cloth",
+      "ssm_mod:brown_cloth",
+      "ssm_mod:blue_cloth",
+      "ssm_mod:black_cloth"
+    ],
+    "minecraft:white_dye"
+  ],
+  "result": {
+    "id": "ssm_mod:white_cloth",
+    "count": 1
+  }
+}

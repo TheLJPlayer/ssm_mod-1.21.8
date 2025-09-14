@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "cloth",
+  "pattern": [
+    "XO",
+    "OX"
+  ],
+  "key": {
+    "X": [
+      "minecraft:red_wool"
+    ],
+    "O": "minecraft:string"
+  },
+  "result": {
+    "id": "ssm_mod:red_cloth",
+    "count": 1
+  }
+}

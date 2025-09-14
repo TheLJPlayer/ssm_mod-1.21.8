@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "cloth",
+  "pattern": [
+    "XO",
+    "OX"
+  ],
+  "key": {
+    "X": [
+      "minecraft:gray_wool"
+    ],
+    "O": "minecraft:string"
+  },
+  "result": {
+    "id": "ssm_mod:gray_cloth",
+    "count": 1
+  }
+}

@@ -30,10 +30,15 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .add(Blocks.ANCIENT_DEBRIS);
         valueLookupBuilder(NEEDS_STEEL_TOOL)
                 .forceAddTag(BlockTags.NEEDS_IRON_TOOL)
-                .forceAddTag(BlockTags.NEEDS_IRON_TOOL)
+                .forceAddTag(BlockTags.NEEDS_STONE_TOOL)
                 .add(Blocks.OBSIDIAN)
                 .add(Blocks.CRYING_OBSIDIAN);
         valueLookupBuilder(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.STEEL_BLOCK)
+                .add(ModBlocks.STEEL_DOOR)
+                .add(ModBlocks.STEEL_TRAPDOOR)
+                .add(ModBlocks.RAW_STEEL_BLOCK);
+        valueLookupBuilder(BlockTags.PICKAXE_MINEABLE)
                 .add(ModBlocks.STEEL_BLOCK)
                 .add(ModBlocks.STEEL_DOOR)
                 .add(ModBlocks.STEEL_TRAPDOOR)

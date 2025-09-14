@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "cloth",
+  "pattern": [
+    "XO",
+    "OX"
+  ],
+  "key": {
+    "X": [
+      "minecraft:light_blue_wool"
+    ],
+    "O": "minecraft:string"
+  },
+  "result": {
+    "id": "ssm_mod:light_blue_cloth",
+    "count": 1
+  }
+}
