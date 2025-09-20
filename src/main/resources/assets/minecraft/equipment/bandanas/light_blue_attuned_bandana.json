@@ -1,0 +1,9 @@
+{
+    "layers": {
+      "humanoid": [
+        {
+          "texture": "ssm_mod:bandanas/light_blue_attuned_bandana_armor"
+        }
+      ]
+    }
+}

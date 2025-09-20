@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "base": [
+    "ssm_mod:cyan_bandana"
+  ],
+  "addition": [
+    "minecraft:echo_shard"
+  ],
+  "template": [
+    "ssm_mod:attunement_upgrade"
+  ],
+  "result": {
+    "id": "ssm_mod:cyan_attuned_bandana",
+    "count": 1
+  }
+}

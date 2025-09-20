@@ -3,7 +3,9 @@
 	"package": "net.theljplayer.ssm_mod.mixin",
 	"compatibilityLevel": "JAVA_21",
 	"mixins": [
-		"ExampleMixin"
+		"ExampleMixin",
+        "LivingEntityMixin",
+        "AirJumpMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

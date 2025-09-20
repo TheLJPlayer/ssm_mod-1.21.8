@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "bandanas",
+  "pattern": [
+    "xOx",
+    "XxX",
+    " X "
+  ],
+  "key": {
+    "X": [
+      "ssm_mod:cyan_cloth"
+    ],
+    "x": [
+      "ssm_mod:red_cloth"
+    ],
+    "O": "minecraft:string"
+  },
+  "result": {
+    "id": "ssm_mod:samuels_bandana",
+    "count": 1
+  }
+}

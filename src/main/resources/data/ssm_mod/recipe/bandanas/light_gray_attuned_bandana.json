@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:smithing_transform",
+  "base": [
+    "ssm_mod:light_gray_bandana"
+  ],
+  "addition": [
+    "minecraft:echo_shard"
+  ],
+  "template": [
+    "ssm_mod:attunement_upgrade"
+  ],
+  "result": {
+    "id": "ssm_mod:light_gray_attuned_bandana",
+    "count": 1
+  }
+}

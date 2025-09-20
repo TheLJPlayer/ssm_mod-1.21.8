@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "group": "bandanas",
+  "pattern": [
+    "XOX",
+    "XXX",
+    " X "
+  ],
+  "key": {
+    "X": [
+      "ssm_mod:magenta_cloth"
+    ],
+    "O": "minecraft:string"
+  },
+  "result": {
+    "id": "ssm_mod:magenta_bandana",
+    "count": 1
+  }
+}

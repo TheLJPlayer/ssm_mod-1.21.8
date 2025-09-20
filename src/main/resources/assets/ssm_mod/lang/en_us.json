@@ -20,6 +20,8 @@
   "item.ssm_mod.steel_battle_axe": "Steel Battle Axe",
   "item.ssm_mod.attuned_steel_battle_axe": "Attuned Steel Battle Axe",
   "item.ssm_mod.attunement_upgrade": "Attunement Upgrade",
+  "item.ssm_mod.jade_stone": "Jade Stone",
+
   "item.ssm_mod.white_cloth": "White Cloth",
   "item.ssm_mod.yellow_cloth": "Yellow Cloth",
   "item.ssm_mod.red_cloth": "Red Cloth",
@@ -37,5 +39,52 @@
   "item.ssm_mod.blue_cloth": "Blue Cloth",
   "item.ssm_mod.black_cloth": "Black Cloth",
 
-  "effect.ssm_mod.stunned": "Stunned"
+  "item.ssm_mod.white_bandana": "White Bandana",
+  "item.ssm_mod.yellow_bandana": "Yellow Bandana",
+  "item.ssm_mod.red_bandana": "Red Bandana",
+  "item.ssm_mod.purple_bandana": "Purple Bandana",
+  "item.ssm_mod.pink_bandana": "Pink Bandana",
+  "item.ssm_mod.orange_bandana": "Orange Bandana",
+  "item.ssm_mod.magenta_bandana": "Magenta Bandana",
+  "item.ssm_mod.lime_bandana": "Lime Bandana",
+  "item.ssm_mod.light_gray_bandana": "Light Gray Bandana",
+  "item.ssm_mod.light_blue_bandana": "Light Blue Bandana",
+  "item.ssm_mod.green_bandana": "Green Bandana",
+  "item.ssm_mod.gray_bandana": "Gray Bandana",
+  "item.ssm_mod.cyan_bandana": "Cyan Bandana",
+  "item.ssm_mod.brown_bandana": "Brown Bandana",
+  "item.ssm_mod.blue_bandana": "Blue Bandana",
+  "item.ssm_mod.black_bandana": "Black Bandana",
+  "item.ssm_mod.samuels_bandana": "Bandana",
+
+  "item.ssm_mod.white_attuned_bandana": "White Attuned Bandana",
+  "item.ssm_mod.yellow_attuned_bandana": "Yellow Attuned Bandana",
+  "item.ssm_mod.red_attuned_bandana": "Red Attuned Bandana",
+  "item.ssm_mod.purple_attuned_bandana": "Purple Attuned Bandana",
+  "item.ssm_mod.pink_attuned_bandana": "Pink Attuned Bandana",
+  "item.ssm_mod.orange_attuned_bandana": "Orange Attuned Bandana",
+  "item.ssm_mod.magenta_attuned_bandana": "Magenta Attuned Bandana",
+  "item.ssm_mod.lime_attuned_bandana": "Lime Attuned Bandana",
+  "item.ssm_mod.light_gray_attuned_bandana": "Light Gray Attuned Bandana",
+  "item.ssm_mod.light_blue_attuned_bandana": "Light Blue Attuned Bandana",
+  "item.ssm_mod.green_attuned_bandana": "Green Attuned Bandana",
+  "item.ssm_mod.gray_attuned_bandana": "Gray Attuned Bandana",
+  "item.ssm_mod.cyan_attuned_bandana": "Cyan Attuned Bandana",
+  "item.ssm_mod.brown_attuned_bandana": "Brown Attuned Bandana",
+  "item.ssm_mod.blue_attuned_bandana": "Blue Attuned Bandana",
+  "item.ssm_mod.black_attuned_bandana": "Black Attuned Bandana",
+  "item.ssm_mod.samuels_attuned_bandana": "Attuned Bandana",
+
+
+  "effect.ssm_mod.stunned": "Stunned",
+  "effect.ssm_mod.slow_mo": "Slow-Mo",
+  "effect.ssm_mod.fast_forward": "Fast Forward",
+  "effect.ssm_mod.shrunken": "Shrunken",
+  "effect.ssm_mod.expansion": "Expansion",
+
+
+  "enchantment.ssm_mod.air_jumps": "Air Jumps",
+
+
+  "air_jump": "Air Jumps"
 }
