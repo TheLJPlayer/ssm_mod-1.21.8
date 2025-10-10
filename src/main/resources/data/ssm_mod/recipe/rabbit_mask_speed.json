@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:smithing_transform",
+  "base": "ssm_mod:blank_mask",
+  "addition": [
+    "minecraft:rabbit_foot"
+  ],
+  "template": "#ssm_mod:cloth",
+  "result": {
+    "id": "ssm_mod:rabbit_mask_speed"
+  }
+}

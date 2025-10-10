@@ -22,6 +22,14 @@ public class ModEffects{
             .addAttributeModifier(EntityAttributes.JUMP_STRENGTH, Identifier.ofVanilla("effects.stunned"), -1f, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
     );
 
+    public static final RegistryEntry<StatusEffect> ADRENALINE = statusEffectRegister("adrenaline", new AdrenalineEffect(StatusEffectCategory.NEUTRAL,0xf10e35)
+            .addAttributeModifier(EntityAttributes.MOVEMENT_SPEED, Identifier.ofVanilla("effects.adrenaline"), 0.12f, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+            .addAttributeModifier(EntityAttributes.MOVEMENT_EFFICIENCY, Identifier.ofVanilla("effects.adrenaline"), 0.12f, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+            .addAttributeModifier(EntityAttributes.WATER_MOVEMENT_EFFICIENCY, Identifier.ofVanilla("effects.adrenaline"), 0.12f, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+            .addAttributeModifier(EntityAttributes.ATTACK_SPEED, Identifier.ofVanilla("effects.adrenaline"), 0.5f, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+            .addAttributeModifier(EntityAttributes.ATTACK_DAMAGE, Identifier.ofVanilla("effects.adrenaline"), 1f, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
+    );
+
     public static final RegistryEntry<StatusEffect> SLOW_MO = statusEffectRegister("slow_mo", new SlowMoEffect(StatusEffectCategory.NEUTRAL,0x2c6628)
             .addAttributeModifier(EntityAttributes.MOVEMENT_SPEED, Identifier.ofVanilla("effects.slow_mo"), -0.125f, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
             .addAttributeModifier(EntityAttributes.MOVEMENT_EFFICIENCY, Identifier.ofVanilla("effects.slow_mo"), -0.125f, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL)
@@ -72,3 +80,4 @@ public class ModEffects{
         SandstoneItemsAndProgression.LOGGER.info("Registering Modded Effects for " + SandstoneItemsAndProgression.MOD_ID);
     }
 }
+

@@ -1,5 +1,6 @@
 {
   "item.ssm_mod.diamond_shard": "Diamond Shard",
+
   "item.ssm_mod.steel_ingot": "Steel Ingot",
   "item.ssm_mod.steel_nugget": "Steel Nugget",
   "item.ssm_mod.raw_steel_scrap": "Steel Scrap",
@@ -17,9 +18,19 @@
   "item.ssm_mod.steel_chestplate": "Steel Chestplate",
   "item.ssm_mod.steel_leggings": "Steel Leggings",
   "item.ssm_mod.steel_boots": "Steel Boots",
+
   "item.ssm_mod.steel_battle_axe": "Steel Battle Axe",
   "item.ssm_mod.attuned_steel_battle_axe": "Attuned Steel Battle Axe",
+
+  "item.ssm_mod.blank_mask": "Blank Mask",
+  "item.ssm_mod.happy_mask": "Happy Mask",
+  "item.ssm_mod.angry_mask": "Angry Mask",
+  "item.ssm_mod.rabbit_mask_speed": "Rabbit Mask",
+  "item.ssm_mod.rabbit_mask_defence": "Rabbit Mask",
+  "item.ssm_mod.attuned_rabbit_mask": "Attuned Rabbit Mask",
+
   "item.ssm_mod.attunement_upgrade": "Attunement Upgrade",
+
   "item.ssm_mod.jade_stone": "Jade Stone",
 
   "item.ssm_mod.white_cloth": "White Cloth",
@@ -77,6 +88,7 @@
 
 
   "effect.ssm_mod.stunned": "Stunned",
+  "effect.ssm_mod.adrenaline": "Adrenaline",
   "effect.ssm_mod.slow_mo": "Slow-Mo",
   "effect.ssm_mod.fast_forward": "Fast Forward",
   "effect.ssm_mod.shrunken": "Shrunken",
@@ -84,6 +96,23 @@
 
 
   "enchantment.ssm_mod.air_jumps": "Air Jumps",
+  "enchantment.ssm_mod.adrenaline": "Adrenaline",
+  "enchantment.ssm_mod.burnt": "Burnt",
+  "enchantment.ssm_mod.iron_fist": "Iron Fist",
+  "enchantment.ssm_mod.spark": "Spark",
+
+  "enchantment.ssm_mod.bludgeoning": "Bludgeoning",
+  "enchantment.ssm_mod.ignite": "Ignite",
+
+  "enchantment.ssm_mod.resilient": "Resilient",
+
+  "enchantment.ssm_mod.clearing": "Clearing",
+  "enchantment.ssm_mod.undetectable": "Undetectable",
+  "enchantment.ssm_mod.hyperreflexia": "Hyperreflexia",
+  "enchantment.ssm_mod.headstrong": "Headstrong",
+  "enchantment.ssm_mod.mimic": "Mimic",
+  "enchantment.ssm_mod.scuba": "Scuba",
+  "enchantment.ssm_mod.affinity": "Affinity",
 
 
   "air_jump": "Air Jumps"

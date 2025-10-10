@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:smithing_transform",
+  "base": [
+    "ssm_mod:rabbit_mask_speed",
+    "ssm_mod:rabbit_mask_defence"
+  ],
+  "addition": [
+    "minecraft:echo_shard"
+  ],
+  "template": [
+    "ssm_mod:attunement_upgrade"
+  ],
+  "result": {
+    "id": "ssm_mod:attuned_rabbit_mask",
+    "count": 1
+  }
+}

@@ -1,11 +1,9 @@
 package net.theljplayer.ssm_mod.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.component.ComponentType;
 import net.minecraft.component.DataComponentTypes;
-import net.minecraft.component.type.AttributeModifierSlot;
-import net.minecraft.component.type.AttributeModifiersComponent;
-import net.minecraft.component.type.BlocksAttacksComponent;
-import net.minecraft.component.type.EquippableComponent;
+import net.minecraft.component.type.*;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.entity.attribute.EntityAttributeModifier;
 import net.minecraft.entity.attribute.EntityAttributes;
@@ -18,11 +16,14 @@ import net.minecraft.registry.RegistryKey;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.DamageTypeTags;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.Rarity;
+import net.minecraft.util.Unit;
 import net.theljplayer.ssm_mod.SandstoneItemsAndProgression;
 import net.theljplayer.ssm_mod.datagen.ModBlockTagProvider;
 import net.theljplayer.ssm_mod.datagen.ModItemTagProvider;
+import net.theljplayer.ssm_mod.entity.ModEntityAttributes;
 
 import java.util.List;
 import java.util.Optional;
@@ -63,7 +64,7 @@ public class ModItems {
     public static final Item BLUE_CLOTH = itemRegister("blue_cloth", Item::new, new Item.Settings());
     public static final Item BLACK_CLOTH = itemRegister("black_cloth", Item::new, new Item.Settings());
 
-    public static final Item WHITE_BANDANA = itemRegister("white_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item WHITE_BANDANA = itemRegister("white_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(218).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
             EntityAttributes.ARMOR,
             new EntityAttributeModifier(
                     Identifier.ofVanilla("armor"),
@@ -88,7 +89,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item YELLOW_BANDANA = itemRegister("yellow_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item YELLOW_BANDANA = itemRegister("yellow_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(218).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -113,7 +114,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item RED_BANDANA = itemRegister("red_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item RED_BANDANA = itemRegister("red_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(218).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -138,7 +139,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item PURPLE_BANDANA = itemRegister("purple_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item PURPLE_BANDANA = itemRegister("purple_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(218).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -163,7 +164,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item PINK_BANDANA = itemRegister("pink_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item PINK_BANDANA = itemRegister("pink_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(218).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -188,7 +189,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item ORANGE_BANDANA = itemRegister("orange_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item ORANGE_BANDANA = itemRegister("orange_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(218).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -213,7 +214,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item MAGENTA_BANDANA = itemRegister("magenta_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item MAGENTA_BANDANA = itemRegister("magenta_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(218).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -238,7 +239,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item LIME_BANDANA = itemRegister("lime_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item LIME_BANDANA = itemRegister("lime_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(218).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -263,7 +264,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item LIGHT_GRAY_BANDANA = itemRegister("light_gray_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item LIGHT_GRAY_BANDANA = itemRegister("light_gray_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(218).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -288,7 +289,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item LIGHT_BLUE_BANDANA = itemRegister("light_blue_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item LIGHT_BLUE_BANDANA = itemRegister("light_blue_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(218).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -313,7 +314,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item GREEN_BANDANA = itemRegister("green_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item GREEN_BANDANA = itemRegister("green_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(218).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -338,7 +339,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item GRAY_BANDANA = itemRegister("gray_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item GRAY_BANDANA = itemRegister("gray_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(218).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -363,7 +364,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item CYAN_BANDANA = itemRegister("cyan_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item CYAN_BANDANA = itemRegister("cyan_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(218).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -388,7 +389,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item BROWN_BANDANA = itemRegister("brown_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item BROWN_BANDANA = itemRegister("brown_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(218).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -413,7 +414,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item BLUE_BANDANA = itemRegister("blue_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item BLUE_BANDANA = itemRegister("blue_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(218).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -438,7 +439,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item BLACK_BANDANA = itemRegister("black_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item BLACK_BANDANA = itemRegister("black_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(218).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -463,7 +464,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item SAMUELS_BANDANA = itemRegister("samuels_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item SAMUELS_BANDANA = itemRegister("samuels_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(218).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -489,7 +490,7 @@ public class ModItems {
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
 
-    public static final Item WHITE_ATTUNED_BANDANA = itemRegister("white_attuned_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item WHITE_ATTUNED_BANDANA = itemRegister("white_attuned_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(306).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -514,7 +515,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item YELLOW_ATTUNED_BANDANA = itemRegister("yellow_attuned_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item YELLOW_ATTUNED_BANDANA = itemRegister("yellow_attuned_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(306).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -539,7 +540,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item RED_ATTUNED_BANDANA = itemRegister("red_attuned_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item RED_ATTUNED_BANDANA = itemRegister("red_attuned_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(306).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -564,7 +565,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item PURPLE_ATTUNED_BANDANA = itemRegister("purple_attuned_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item PURPLE_ATTUNED_BANDANA = itemRegister("purple_attuned_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(306).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -589,7 +590,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item PINK_ATTUNED_BANDANA = itemRegister("pink_attuned_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item PINK_ATTUNED_BANDANA = itemRegister("pink_attuned_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(306).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -614,7 +615,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item ORANGE_ATTUNED_BANDANA = itemRegister("orange_attuned_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item ORANGE_ATTUNED_BANDANA = itemRegister("orange_attuned_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(306).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -639,7 +640,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item MAGENTA_ATTUNED_BANDANA = itemRegister("magenta_attuned_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item MAGENTA_ATTUNED_BANDANA = itemRegister("magenta_attuned_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(306).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -664,7 +665,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item LIME_ATTUNED_BANDANA = itemRegister("lime_attuned_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item LIME_ATTUNED_BANDANA = itemRegister("lime_attuned_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(306).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -689,7 +690,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item LIGHT_GRAY_ATTUNED_BANDANA = itemRegister("light_gray_attuned_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item LIGHT_GRAY_ATTUNED_BANDANA = itemRegister("light_gray_attuned_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(306).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -714,7 +715,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item LIGHT_BLUE_ATTUNED_BANDANA = itemRegister("light_blue_attuned_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item LIGHT_BLUE_ATTUNED_BANDANA = itemRegister("light_blue_attuned_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(306).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -739,7 +740,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item GREEN_ATTUNED_BANDANA = itemRegister("green_attuned_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item GREEN_ATTUNED_BANDANA = itemRegister("green_attuned_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(306).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -764,7 +765,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item GRAY_ATTUNED_BANDANA = itemRegister("gray_attuned_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item GRAY_ATTUNED_BANDANA = itemRegister("gray_attuned_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(306).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -789,7 +790,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item CYAN_ATTUNED_BANDANA = itemRegister("cyan_attuned_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item CYAN_ATTUNED_BANDANA = itemRegister("cyan_attuned_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(306).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -814,7 +815,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item BROWN_ATTUNED_BANDANA = itemRegister("brown_attuned_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item BROWN_ATTUNED_BANDANA = itemRegister("brown_attuned_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(306).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -839,7 +840,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item BLUE_ATTUNED_BANDANA = itemRegister("blue_attuned_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item BLUE_ATTUNED_BANDANA = itemRegister("blue_attuned_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(306).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -864,7 +865,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item BLACK_ATTUNED_BANDANA = itemRegister("black_attuned_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item BLACK_ATTUNED_BANDANA = itemRegister("black_attuned_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(306).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).rarity(Rarity.UNCOMMON).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -889,7 +890,7 @@ public class ModItems {
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
     )));
-    public static final Item SAMUELS_ATTUNED_BANDANA = itemRegister("samuels_attuned_bandana", Item::new, new Item.Settings().maxCount(1).enchantable(22).rarity(Rarity.RARE).attributeModifiers(AttributeModifiersComponent.builder().add(
+    public static final Item SAMUELS_ATTUNED_BANDANA = itemRegister("samuels_attuned_bandana", Item::new, new Item.Settings().maxCount(1).maxDamage(306).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(22).rarity(Rarity.RARE).attributeModifiers(AttributeModifiersComponent.builder().add(
                     EntityAttributes.ARMOR,
                     new EntityAttributeModifier(
                             Identifier.ofVanilla("armor"),
@@ -913,6 +914,162 @@ public class ModItems {
             true,
             false,
             SoundEvents.ITEM_ARMOR_EQUIP_LEATHER
+    )));
+    public static final Item BLANK_MASK = itemRegister("blank_mask", Item::new, new Item.Settings().maxCount(1).maxDamage(408).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(10).component(DataComponentTypes.EQUIPPABLE, new EquippableComponent(
+            EquipmentSlot.HEAD,
+            SoundEvents.ITEM_ARMOR_EQUIP_TURTLE,
+            Optional.of(EquipmentAssetKeys.register("blank_mask")),
+            Optional.of(Identifier.of("ssm_mod:overlay/mask_obscured")),
+            Optional.empty(),
+            true,
+            true,
+            false,
+            true,
+            false,
+            SoundEvents.ITEM_ARMOR_EQUIP_TURTLE
+    )));
+    public static final Item HAPPY_MASK = itemRegister("happy_mask", Item::new, new Item.Settings().maxCount(1).maxDamage(462).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(10).attributeModifiers(AttributeModifiersComponent.builder().add(
+                    EntityAttributes.MAX_HEALTH,
+                    new EntityAttributeModifier(
+                            Identifier.ofVanilla("armor.max_health"),
+                            2f, EntityAttributeModifier.Operation.ADD_VALUE),
+                    AttributeModifierSlot.HEAD)
+            .build()).component(DataComponentTypes.EQUIPPABLE, new EquippableComponent(
+            EquipmentSlot.HEAD,
+            SoundEvents.ITEM_ARMOR_EQUIP_TURTLE,
+            Optional.of(EquipmentAssetKeys.register("happy_mask")),
+            Optional.of(Identifier.of("ssm_mod:overlay/mask_obscured")),
+            Optional.empty(),
+            true,
+            true,
+            false,
+            true,
+            false,
+            SoundEvents.ITEM_ARMOR_EQUIP_TURTLE
+    )));
+    public static final Item ANGRY_MASK = itemRegister("angry_mask", Item::new, new Item.Settings().maxCount(1).maxDamage(408).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(10).attributeModifiers(AttributeModifiersComponent.builder().add(
+                    EntityAttributes.ATTACK_DAMAGE,
+                    new EntityAttributeModifier(
+                            Identifier.ofVanilla("armor.attack_damage"),
+                            3f, EntityAttributeModifier.Operation.ADD_VALUE),
+                    AttributeModifierSlot.HEAD)
+            .build()).component(DataComponentTypes.EQUIPPABLE, new EquippableComponent(
+            EquipmentSlot.HEAD,
+            SoundEvents.ITEM_ARMOR_EQUIP_TURTLE,
+            Optional.of(EquipmentAssetKeys.register("angry_mask")),
+            Optional.of(Identifier.of("ssm_mod:overlay/mask_obscured")),
+            Optional.empty(),
+            true,
+            true,
+            false,
+            true,
+            false,
+            SoundEvents.ITEM_ARMOR_EQUIP_TURTLE
+    )));
+    public static final Item RABBIT_MASK_SPEED = itemRegister("rabbit_mask_speed", Item::new, new Item.Settings().maxCount(1).maxDamage(408).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(16).attributeModifiers(AttributeModifiersComponent.builder().add(
+                    EntityAttributes.MOVEMENT_SPEED,
+                    new EntityAttributeModifier(
+                            Identifier.ofVanilla("armor.movement_speed"),
+                            0.15f, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+                    AttributeModifierSlot.HEAD)
+            .add(
+                    EntityAttributes.MOVEMENT_EFFICIENCY,
+                    new EntityAttributeModifier(
+                            Identifier.ofVanilla("armor.movement_efficiency"),
+                            0.15f, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+                    AttributeModifierSlot.HEAD)
+            .add(
+                    EntityAttributes.WATER_MOVEMENT_EFFICIENCY,
+                    new EntityAttributeModifier(
+                            Identifier.ofVanilla("armor.water_movement_efficiency"),
+                            0.15f, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+                    AttributeModifierSlot.HEAD)
+            .add(
+                    ModEntityAttributes.AIR_JUMP,
+                    new EntityAttributeModifier(
+                            Identifier.ofVanilla("armor.air_jump"),
+                            1f, EntityAttributeModifier.Operation.ADD_VALUE),
+                    AttributeModifierSlot.HEAD)
+            .build()).component(DataComponentTypes.EQUIPPABLE, new EquippableComponent(
+            EquipmentSlot.HEAD,
+            SoundEvents.ITEM_ARMOR_EQUIP_TURTLE,
+            Optional.of(EquipmentAssetKeys.register("rabbit_mask")),
+            Optional.of(Identifier.of("ssm_mod:overlay/rabbit_mask_obscured")),
+            Optional.empty(),
+            true,
+            true,
+            false,
+            true,
+            false,
+            SoundEvents.ITEM_ARMOR_EQUIP_TURTLE
+    )).component(DataComponentTypes.LORE, new LoreComponent(List.of(Text.literal("Speed Form")))));
+    public static final Item RABBIT_MASK_DEFENCE = itemRegister("rabbit_mask_defence", Item::new, new Item.Settings().maxCount(1).maxDamage(524).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(16).attributeModifiers(AttributeModifiersComponent.builder().add(
+                    EntityAttributes.ARMOR,
+                    new EntityAttributeModifier(
+                            Identifier.ofVanilla("armor.armor"),
+                            3f, EntityAttributeModifier.Operation.ADD_VALUE),
+                    AttributeModifierSlot.HEAD)
+            .add(
+                    ModEntityAttributes.AIR_JUMP,
+                    new EntityAttributeModifier(
+                            Identifier.ofVanilla("armor.air_jump"),
+                            1f, EntityAttributeModifier.Operation.ADD_VALUE),
+                    AttributeModifierSlot.HEAD)
+            .build()).component(DataComponentTypes.EQUIPPABLE, new EquippableComponent(
+            EquipmentSlot.HEAD,
+            SoundEvents.ITEM_ARMOR_EQUIP_TURTLE,
+            Optional.of(EquipmentAssetKeys.register("rabbit_mask")),
+            Optional.of(Identifier.of("ssm_mod:overlay/rabbit_mask_obscured")),
+            Optional.empty(),
+            true,
+            true,
+            false,
+            true,
+            false,
+            SoundEvents.ITEM_ARMOR_EQUIP_TURTLE
+    )).component(DataComponentTypes.LORE, new LoreComponent(List.of(Text.literal("Defence Form")))));
+    public static final Item ATTUNED_RABBIT_MASK = itemRegister("attuned_rabbit_mask", Item::new, new Item.Settings().maxCount(1).maxDamage(602).component(DataComponentTypes.UNBREAKABLE, Unit.INSTANCE).enchantable(16).rarity(Rarity.RARE).attributeModifiers(AttributeModifiersComponent.builder().add(
+                    EntityAttributes.MOVEMENT_SPEED,
+                    new EntityAttributeModifier(
+                            Identifier.ofVanilla("armor.movement_speed"),
+                            0.25f, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+                    AttributeModifierSlot.HEAD)
+            .add(
+                    EntityAttributes.MOVEMENT_EFFICIENCY,
+                    new EntityAttributeModifier(
+                            Identifier.ofVanilla("armor.movement_efficiency"),
+                            0.25f, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+                    AttributeModifierSlot.HEAD)
+            .add(
+                    EntityAttributes.WATER_MOVEMENT_EFFICIENCY,
+                    new EntityAttributeModifier(
+                            Identifier.ofVanilla("armor.water_movement_efficiency"),
+                            0.25f, EntityAttributeModifier.Operation.ADD_MULTIPLIED_TOTAL),
+                    AttributeModifierSlot.HEAD)
+            .add(
+                    EntityAttributes.ARMOR,
+                    new EntityAttributeModifier(
+                            Identifier.ofVanilla("armor.armor"),
+                            5f, EntityAttributeModifier.Operation.ADD_VALUE),
+                    AttributeModifierSlot.HEAD)
+            .add(
+                    ModEntityAttributes.AIR_JUMP,
+                    new EntityAttributeModifier(
+                            Identifier.ofVanilla("armor.air_jump"),
+                            1f, EntityAttributeModifier.Operation.ADD_VALUE),
+                    AttributeModifierSlot.HEAD)
+            .build()).component(DataComponentTypes.EQUIPPABLE, new EquippableComponent(
+            EquipmentSlot.HEAD,
+            SoundEvents.ITEM_ARMOR_EQUIP_TURTLE,
+            Optional.empty(),
+            Optional.of(Identifier.of("ssm_mod:overlay/rabbit_mask_obscured")),
+            Optional.empty(),
+            true,
+            true,
+            false,
+            true,
+            false,
+            SoundEvents.ITEM_ARMOR_EQUIP_TURTLE
     )));
 
     public static final Item STEEL_INGOT = itemRegister("steel_ingot", Item::new, new Item.Settings());
@@ -1052,12 +1209,16 @@ public class ModItems {
             fabricItemGroupEntries.add(BLUE_CLOTH);
             fabricItemGroupEntries.add(BLACK_CLOTH);
         });
+
+
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(fabricItemGroupEntries -> {
             fabricItemGroupEntries.add(STEEL_AXE);
             fabricItemGroupEntries.add(STEEL_PICKAXE);
             fabricItemGroupEntries.add(STEEL_SHOVEL);
             fabricItemGroupEntries.add(STEEL_HOE);
         });
+
+
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(fabricItemGroupEntries -> {
             fabricItemGroupEntries.add(STEEL_SWORD);
             fabricItemGroupEntries.add(STEEL_AXE);
@@ -1067,6 +1228,13 @@ public class ModItems {
             fabricItemGroupEntries.add(STEEL_BOOTS);
             fabricItemGroupEntries.add(STEEL_BATTLE_AXE);
             fabricItemGroupEntries.add(ATTUNED_STEEL_BATTLE_AXE);
+
+            fabricItemGroupEntries.add(BLANK_MASK);
+            fabricItemGroupEntries.add(HAPPY_MASK);
+            fabricItemGroupEntries.add(ANGRY_MASK);
+            fabricItemGroupEntries.add(RABBIT_MASK_SPEED);
+            fabricItemGroupEntries.add(RABBIT_MASK_DEFENCE);
+            fabricItemGroupEntries.add(ATTUNED_RABBIT_MASK);
 
             fabricItemGroupEntries.add(WHITE_BANDANA);
             fabricItemGroupEntries.add(YELLOW_BANDANA);

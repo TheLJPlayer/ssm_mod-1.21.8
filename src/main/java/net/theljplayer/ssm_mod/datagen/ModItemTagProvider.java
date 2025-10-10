@@ -3,6 +3,7 @@ package net.theljplayer.ssm_mod.datagen;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricTagProvider;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.RegistryWrapper;
 import net.minecraft.registry.tag.ItemTags;
@@ -21,8 +22,11 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
     public static final TagKey<Item> REPAIRS_CLOTH_ARMOR = TagKey.of(RegistryKeys.ITEM, Identifier.of(SandstoneItemsAndProgression.MOD_ID, "repairs_cloth_armor"));
     public static final TagKey<Item> ATTUNED_ITEMS = TagKey.of(RegistryKeys.ITEM, Identifier.of(SandstoneItemsAndProgression.MOD_ID, "attuned_items"));
     public static final TagKey<Item> CLOTH = TagKey.of(RegistryKeys.ITEM, Identifier.of(SandstoneItemsAndProgression.MOD_ID, "cloth"));
+    public static final TagKey<Item> RABBIT_MASKS = TagKey.of(RegistryKeys.ITEM, Identifier.of(SandstoneItemsAndProgression.MOD_ID, "rabbit_masks"));
+    public static final TagKey<Item> MASKS = TagKey.of(RegistryKeys.ITEM, Identifier.of(SandstoneItemsAndProgression.MOD_ID, "masks"));
     public static final TagKey<Item> BANDANAS = TagKey.of(RegistryKeys.ITEM, Identifier.of(SandstoneItemsAndProgression.MOD_ID, "bandanas"));
     public static final TagKey<Item> AIR_JUMP_ENCHANTABLE = TagKey.of(RegistryKeys.ITEM, Identifier.of(SandstoneItemsAndProgression.MOD_ID, "enchantable/air_jumps"));
+    public static final TagKey<Item> RESILIENT_ENCHANTABLE = TagKey.of(RegistryKeys.ITEM, Identifier.of(SandstoneItemsAndProgression.MOD_ID, "enchantable/resilient"));
 
     public ModItemTagProvider(FabricDataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registriesFuture) {
         super(output, registriesFuture);
@@ -47,6 +51,9 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         valueLookupBuilder(ItemTags.SHARP_WEAPON_ENCHANTABLE)
                 .forceAddTag(STEEL_BATTLE_AXES);
 
+        valueLookupBuilder(ItemTags.CHEST_ARMOR_ENCHANTABLE)
+                .forceAddTag(BANDANAS);
+
         valueLookupBuilder(ItemTags.SWORDS)
                 .add(ModItems.STEEL_SWORD);
 
@@ -67,7 +74,6 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.STEEL_HELMET);
 
         valueLookupBuilder(ItemTags.CHEST_ARMOR)
-                .forceAddTag(BANDANAS)
                 .add(ModItems.STEEL_CHESTPLATE);
 
         valueLookupBuilder(ItemTags.LEG_ARMOR)
@@ -77,6 +83,25 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.STEEL_BOOTS);
 
         valueLookupBuilder(ATTUNED_ITEMS)
+                .add(ModItems.WHITE_ATTUNED_BANDANA)
+                .add(ModItems.YELLOW_ATTUNED_BANDANA)
+                .add(ModItems.RED_ATTUNED_BANDANA )
+                .add(ModItems.PURPLE_ATTUNED_BANDANA)
+                .add(ModItems.PINK_ATTUNED_BANDANA)
+                .add(ModItems.ORANGE_ATTUNED_BANDANA)
+                .add(ModItems.MAGENTA_ATTUNED_BANDANA)
+                .add(ModItems.LIME_ATTUNED_BANDANA)
+                .add(ModItems.LIGHT_GRAY_ATTUNED_BANDANA)
+                .add(ModItems.LIGHT_BLUE_ATTUNED_BANDANA)
+                .add(ModItems.GREEN_ATTUNED_BANDANA)
+                .add(ModItems.GRAY_ATTUNED_BANDANA)
+                .add(ModItems.CYAN_ATTUNED_BANDANA)
+                .add(ModItems.BROWN_ATTUNED_BANDANA)
+                .add(ModItems.BLUE_ATTUNED_BANDANA)
+                .add(ModItems.BLACK_ATTUNED_BANDANA)
+                .add(ModItems.SAMUELS_ATTUNED_BANDANA)
+
+                .add(ModItems.ATTUNED_RABBIT_MASK)
                 .add(ModItems.ATTUNED_STEEL_BATTLE_AXE);
 
         valueLookupBuilder(CLOTH)
@@ -96,6 +121,17 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.BROWN_CLOTH)
                 .add(ModItems.BLUE_CLOTH)
                 .add(ModItems.BLACK_CLOTH);
+
+        valueLookupBuilder(RABBIT_MASKS)
+                .add(ModItems.RABBIT_MASK_SPEED)
+                .add(ModItems.RABBIT_MASK_DEFENCE)
+                .add(ModItems.ATTUNED_RABBIT_MASK);
+
+        valueLookupBuilder(MASKS)
+                .add(ModItems.BLANK_MASK)
+                .add(ModItems.HAPPY_MASK)
+                .add(ModItems.ANGRY_MASK)
+                .forceAddTag(RABBIT_MASKS);
 
         valueLookupBuilder(BANDANAS)
                 .add(ModItems.WHITE_BANDANA)
@@ -137,5 +173,10 @@ public class ModItemTagProvider extends FabricTagProvider.ItemTagProvider {
         valueLookupBuilder(AIR_JUMP_ENCHANTABLE)
                 .forceAddTag(BANDANAS)
                 .forceAddTag(ItemTags.FOOT_ARMOR);
+
+        valueLookupBuilder(RESILIENT_ENCHANTABLE)
+                .add(Items.ELYTRA)
+                .forceAddTag(BANDANAS)
+                .forceAddTag(MASKS);
     }
 }

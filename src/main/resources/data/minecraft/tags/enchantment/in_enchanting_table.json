@@ -1,6 +1,23 @@
 {
   "replace": false,
   "values": [
-    "ssm_mod:air_jumps"
+    "ssm_mod:air_jumps",
+    "ssm_mod:adrenaline",
+    "ssm_mod:burnt",
+    "ssm_mod:iron_fist",
+    "ssm_mod:spark",
+
+    "ssm_mod:bludgeoning",
+    "ssm_mod:ignite",
+
+    "ssm_mod:resilient",
+
+    "ssm_mod:clearing",
+    "ssm_mod:undetectable",
+    "ssm_mod:hyperreflexia",
+    "ssm_mod:headstrong",
+    "ssm_mod:mimic",
+    "ssm_mod:scuba",
+    "ssm_mod:affinity"
   ]
 }
