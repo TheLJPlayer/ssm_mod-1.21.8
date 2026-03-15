@@ -1,0 +1,33 @@
+{
+  "anvil_cost": 1,
+  "description": {
+    "translate": "enchantment.ssm_mod.ignite"
+  },
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:ignite",
+          "duration": 8.0
+        },
+        "enchanted": "attacker"
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 30,
+    "per_level_above_first": 0
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 10,
+    "per_level_above_first": 0
+  },
+  "primary_items": "#ssm_mod:steel_battle_axes",
+  "slots": [
+    "mainhand"
+  ],
+  "supported_items": "#ssm_mod:steel_battle_axes",
+  "weight": 3
+}

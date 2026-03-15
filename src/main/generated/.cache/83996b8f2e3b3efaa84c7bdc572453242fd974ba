@@ -1,0 +1,23 @@
+// 1.21.11	-999999999-01-01T00:00:00	Sandstone Items And Progression/Tags for minecraft:item
+2c7792b1c6bc5c0740d91f31c56c2c6a54dfdfd1 data/minecraft/tags/item/axes.json
+c0ab66615cb334c5527abcd773128baeea813072 data/minecraft/tags/item/chest_armor.json
+2e706bf35c82eeba4530d96977c4ea9ba23d5f2e data/minecraft/tags/item/enchantable/chest_armor.json
+6364bbf7b3a3a422a9b5dd84d735691b02d44b2e data/minecraft/tags/item/enchantable/sharp_weapon.json
+819e497b404ce762b35c2be355c030e430dda681 data/minecraft/tags/item/foot_armor.json
+902a686d0c6473f99771a4221db3d0d917bd9715 data/minecraft/tags/item/head_armor.json
+b6a4cdd0eee8662ff674e9fe38d26ea53eaf078b data/minecraft/tags/item/hoes.json
+6b7975a49f0bf89f8ea16910e79ae5bef1b2b88c data/minecraft/tags/item/leg_armor.json
+86f3adf300c4f38764c4761ec0141011b0afd445 data/minecraft/tags/item/pickaxes.json
+25c277fef2170eafda1d3a167cbd9b3c93a4a46a data/minecraft/tags/item/shovels.json
+5086905ab26c69f15c98dfa902d146cbab080385 data/minecraft/tags/item/swords.json
+20483a85e01c282a557530acc6e4464af8eddf5d data/ssm_mod/tags/item/attuned_items.json
+00b726e556932b4047d22b3b604156c025a0862d data/ssm_mod/tags/item/bandanas.json
+e7db621fdf91d7a58716315e381cb41646b55992 data/ssm_mod/tags/item/cloth.json
+ae53fd0d812a043b70ae4b12a8ae77d78f281f02 data/ssm_mod/tags/item/enchantable/air_jumps.json
+61489336ae8cc807680912c4a97509b1bcee883f data/ssm_mod/tags/item/enchantable/resilient.json
+958c568a8b73d71ce3de30fafa2ad9a266259cc6 data/ssm_mod/tags/item/masks.json
+0cdc63f9664c6b9e6a808ebd9ea9d05be230ab42 data/ssm_mod/tags/item/rabbit_masks.json
+ce4b414b9698ac7ed7ac584577a4e21a55f8fa90 data/ssm_mod/tags/item/repairs_cloth_armor.json
+7e4931da52cb747df4c8cc330b690b21f124108f data/ssm_mod/tags/item/repairs_steel_armor.json
+733f9a7a87cbd76867c4c2fe2e2789bd03da1d8e data/ssm_mod/tags/item/steel_battle_axes.json
+7e4931da52cb747df4c8cc330b690b21f124108f data/ssm_mod/tags/item/steel_tool_material.json

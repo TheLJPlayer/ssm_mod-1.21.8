@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:smithing_transform",
-  "base": "ssm_mod:blank_mask",
-  "template": "#ssm_mod:cloth",
-  "result": {
-    "id": "ssm_mod:happy_mask"
-  }
-}

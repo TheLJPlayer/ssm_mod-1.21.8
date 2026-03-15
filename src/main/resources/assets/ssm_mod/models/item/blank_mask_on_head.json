@@ -1,0 +1,6 @@
+{
+  "parent": "ssm_mod:item/worn_mask",
+  "textures": {
+    "0": "ssm_mod:item/blank_mask_on_head"
+  }
+}

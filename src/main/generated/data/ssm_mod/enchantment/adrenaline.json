@@ -1,0 +1,38 @@
+{
+  "anvil_cost": 2,
+  "description": {
+    "translate": "enchantment.ssm_mod.adrenaline"
+  },
+  "effects": {
+    "minecraft:post_attack": [
+      {
+        "affected": "victim",
+        "effect": {
+          "type": "minecraft:apply_mob_effect",
+          "max_amplifier": 1.0,
+          "max_duration": 3.0,
+          "min_amplifier": 0.0,
+          "min_duration": 3.0,
+          "to_apply": "ssm_mod:adrenaline"
+        },
+        "enchanted": "victim"
+      }
+    ]
+  },
+  "exclusive_set": "ssm_mod:spark",
+  "max_cost": {
+    "base": 24,
+    "per_level_above_first": 0
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 12,
+    "per_level_above_first": 0
+  },
+  "primary_items": "#ssm_mod:bandanas",
+  "slots": [
+    "chest"
+  ],
+  "supported_items": "#ssm_mod:bandanas",
+  "weight": 2
+}

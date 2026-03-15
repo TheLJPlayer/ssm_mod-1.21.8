@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:item/generated",
-  "textures": {
-    "layer0": "ssm_mod:item/light_blue_attuned_bandana"
-  }
-}

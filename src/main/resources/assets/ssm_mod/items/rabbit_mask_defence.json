@@ -1,6 +1,19 @@
 {
   "model": {
-    "type": "minecraft:model",
-    "model": "ssm_mod:item/rabbit_mask_defence"
+    "type": "minecraft:select",
+    "property": "minecraft:display_context",
+    "cases": [
+      {
+        "when": "head",
+        "model": {
+          "type": "minecraft:model",
+          "model": "ssm_mod:item/rabbit_mask_defence_on_head"
+        }
+      }
+    ],
+    "fallback": {
+      "type": "minecraft:model",
+      "model": "ssm_mod:item/rabbit_mask_defence"
+    }
   }
 }

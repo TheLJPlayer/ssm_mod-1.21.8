@@ -1,0 +1,20 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "bandanas",
+  "pattern": [
+    "X0X",
+    "XXX",
+    " X "
+  ],
+  "key": {
+    "X": [
+      "ssm_mod:cloth"
+    ],
+    "0": "minecraft:string"
+  },
+  "result": {
+    "id": "ssm_mod:bandana",
+    "count": 1
+  }
+}

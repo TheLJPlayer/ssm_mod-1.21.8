@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ssm_mod:block/steel_block"
+    }
+  }
+}

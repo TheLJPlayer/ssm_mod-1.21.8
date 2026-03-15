@@ -1,0 +1,47 @@
+{
+  "anvil_cost": 1,
+  "description": {
+    "translate": "enchantment.ssm_mod.affinity"
+  },
+  "effects": {
+    "minecraft:block_experience": [
+      {
+        "effect": {
+          "type": "minecraft:multiply",
+          "factor": {
+            "type": "minecraft:linear",
+            "base": 0.5,
+            "per_level_above_first": 0.5
+          }
+        }
+      }
+    ],
+    "minecraft:mob_experience": [
+      {
+        "effect": {
+          "type": "minecraft:multiply",
+          "factor": {
+            "type": "minecraft:linear",
+            "base": 0.5,
+            "per_level_above_first": 0.5
+          }
+        }
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 30,
+    "per_level_above_first": 0
+  },
+  "max_level": 3,
+  "min_cost": {
+    "base": 24,
+    "per_level_above_first": 6
+  },
+  "primary_items": "#ssm_mod:masks",
+  "slots": [
+    "head"
+  ],
+  "supported_items": "#ssm_mod:masks",
+  "weight": 4
+}

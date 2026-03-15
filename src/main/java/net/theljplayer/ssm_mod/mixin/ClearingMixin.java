@@ -7,10 +7,8 @@ import net.minecraft.client.gui.hud.InGameHud;
 import net.minecraft.client.render.RenderTickCounter;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.registry.*;
-import net.minecraft.registry.entry.RegistryEntry;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
-import net.theljplayer.ssm_mod.enchantment.ModEnchantments;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.Shadow;
@@ -46,11 +44,11 @@ public abstract class ClearingMixin {
         context.fill(RenderPipelines.GUI, m, l, context.getScaledWindowWidth(), n, -16777216);
     }
 
-    @Inject(method = "renderMiscOverlays", at = @At(value = "INVOKE", target = "Lnet/minecraft/component/type/EquippableComponent;cameraOverlay()Ljava/util/Optional;", shift = At.Shift.BEFORE), cancellable = true)
-    public void renderSpyglassOverlay(DrawContext context, RenderTickCounter tickCounter, CallbackInfo ci) {
-        if (this.client.player.getEquippedStack(EquipmentSlot.HEAD).getEnchantments().getEnchantments().contains(RegistryEntry.of(ModEnchantments.CLEARING))) {
-            ci.cancel();
-            this.renderClearingOverlay(context);
-        }
-    }
+    //@Inject(method = "renderMiscOverlays", at = @At(value = "INVOKE", target = "Lnet/minecraft/component/type/EquippableComponent;cameraOverlay()Ljava/util/Optional;", shift = At.Shift.BEFORE), cancellable = true)
+    //public void renderSpyglassOverlay(DrawContext context, RenderTickCounter tickCounter, CallbackInfo ci) {
+        //if (client.player.getEquippedStack(EquipmentSlot.HEAD).isEmpty()) {
+            //ci.cancel();
+            //this.renderClearingOverlay(context);
+        //}
+    //}
 }

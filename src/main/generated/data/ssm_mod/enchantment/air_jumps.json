@@ -1,0 +1,35 @@
+{
+  "anvil_cost": 1,
+  "description": {
+    "translate": "enchantment.ssm_mod.air_jumps"
+  },
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 1.0,
+          "per_level_above_first": 1.0
+        },
+        "attribute": "ssm_mod:air_jump",
+        "id": "minecraft:enchantment.air_jumps",
+        "operation": "add_value"
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 24,
+    "per_level_above_first": 10
+  },
+  "max_level": 3,
+  "min_cost": {
+    "base": 10,
+    "per_level_above_first": 7
+  },
+  "primary_items": "#ssm_mod:bandanas",
+  "slots": [
+    "armor"
+  ],
+  "supported_items": "#ssm_mod:enchantable/air_jumps",
+  "weight": 5
+}

@@ -1,0 +1,8 @@
+{
+  "values": [
+    "ssm_mod:blank_mask",
+    "ssm_mod:happy_mask",
+    "ssm_mod:angry_mask",
+    "#ssm_mod:rabbit_masks"
+  ]
+}

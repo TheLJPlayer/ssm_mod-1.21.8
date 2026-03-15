@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "cloth",
+  "category": "misc",
+  "pattern": [
+    "X0",
+    "0X"
+  ],
+  "key": {
+    "0": [
+      "minecraft:string"
+    ],
+    "X": "#minecraft:wool"
+  },
+  "result": {
+    "id": "ssm_mod:cloth",
+    "count": 4
+  }
+}

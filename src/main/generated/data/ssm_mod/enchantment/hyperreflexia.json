@@ -1,0 +1,66 @@
+{
+  "anvil_cost": 1,
+  "description": {
+    "translate": "enchantment.ssm_mod.hyperreflexia"
+  },
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 0.2,
+          "per_level_above_first": 0.1
+        },
+        "attribute": "minecraft:movement_speed",
+        "id": "minecraft:enchantment.hyperreflexia",
+        "operation": "add_multiplied_total"
+      },
+      {
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 0.2,
+          "per_level_above_first": 0.1
+        },
+        "attribute": "minecraft:movement_efficiency",
+        "id": "minecraft:enchantment.hyperreflexia",
+        "operation": "add_multiplied_total"
+      },
+      {
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 0.2,
+          "per_level_above_first": 0.1
+        },
+        "attribute": "minecraft:water_movement_efficiency",
+        "id": "minecraft:enchantment.hyperreflexia",
+        "operation": "add_multiplied_total"
+      },
+      {
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 0.6,
+          "per_level_above_first": 0.4
+        },
+        "attribute": "minecraft:attack_speed",
+        "id": "minecraft:enchantment.hyperreflexia",
+        "operation": "add_multiplied_total"
+      }
+    ]
+  },
+  "exclusive_set": "ssm_mod:headstrong",
+  "max_cost": {
+    "base": 30,
+    "per_level_above_first": 0
+  },
+  "max_level": 3,
+  "min_cost": {
+    "base": 0,
+    "per_level_above_first": 10
+  },
+  "primary_items": "#ssm_mod:rabbit_masks",
+  "slots": [
+    "head"
+  ],
+  "supported_items": "#ssm_mod:rabbit_masks",
+  "weight": 5
+}

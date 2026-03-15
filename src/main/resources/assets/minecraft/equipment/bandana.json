@@ -1,0 +1,12 @@
+{
+    "layers": {
+      "humanoid": [
+        {
+          "dyeable": {
+            "color_when_undyed": -1
+          },
+          "texture": "ssm_mod:bandanas/white_bandana_armor"
+        }
+      ]
+    }
+}

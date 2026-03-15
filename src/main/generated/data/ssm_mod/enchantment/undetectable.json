@@ -1,0 +1,22 @@
+{
+  "anvil_cost": 1,
+  "description": {
+    "translate": "enchantment.ssm_mod.undetectable"
+  },
+  "exclusive_set": "ssm_mod:clearing",
+  "max_cost": {
+    "base": 41,
+    "per_level_above_first": 0
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 20,
+    "per_level_above_first": 0
+  },
+  "primary_items": "#ssm_mod:masks",
+  "slots": [
+    "head"
+  ],
+  "supported_items": "#ssm_mod:masks",
+  "weight": 3
+}

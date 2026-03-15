@@ -1,0 +1,37 @@
+{
+  "anvil_cost": 1,
+  "description": {
+    "translate": "enchantment.ssm_mod.scuba"
+  },
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "amount": 5.0,
+        "attribute": "minecraft:submerged_mining_speed",
+        "id": "minecraft:enchantment.scuba",
+        "operation": "add_multiplied_total"
+      },
+      {
+        "amount": 6.0,
+        "attribute": "minecraft:oxygen_bonus",
+        "id": "minecraft:enchantment.scuba",
+        "operation": "add_value"
+      }
+    ]
+  },
+  "max_cost": {
+    "base": 30,
+    "per_level_above_first": 0
+  },
+  "max_level": 1,
+  "min_cost": {
+    "base": 15,
+    "per_level_above_first": 0
+  },
+  "primary_items": "#ssm_mod:masks",
+  "slots": [
+    "head"
+  ],
+  "supported_items": "#ssm_mod:masks",
+  "weight": 4
+}

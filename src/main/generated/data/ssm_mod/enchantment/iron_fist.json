@@ -1,0 +1,36 @@
+{
+  "anvil_cost": 3,
+  "description": {
+    "translate": "enchantment.ssm_mod.iron_fist"
+  },
+  "effects": {
+    "minecraft:attributes": [
+      {
+        "amount": {
+          "type": "minecraft:linear",
+          "base": 0.1,
+          "per_level_above_first": 0.1
+        },
+        "attribute": "minecraft:attack_damage",
+        "id": "minecraft:enchantment.iron_fist",
+        "operation": "add_multiplied_total"
+      }
+    ]
+  },
+  "exclusive_set": "ssm_mod:adrenaline",
+  "max_cost": {
+    "base": 24,
+    "per_level_above_first": 10
+  },
+  "max_level": 3,
+  "min_cost": {
+    "base": 18,
+    "per_level_above_first": 10
+  },
+  "primary_items": "#ssm_mod:bandanas",
+  "slots": [
+    "chest"
+  ],
+  "supported_items": "#ssm_mod:bandanas",
+  "weight": 2
+}

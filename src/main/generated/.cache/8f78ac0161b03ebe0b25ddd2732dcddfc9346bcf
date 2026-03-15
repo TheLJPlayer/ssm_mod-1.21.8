@@ -1,0 +1,5 @@
+// 1.21.11	-999999999-01-01T00:00:00	Sandstone Items And Progression/Tags for minecraft:block
+273cd8db5840564b44395a9c18bfa325d74251e2 data/minecraft/tags/block/mineable/pickaxe.json
+273cd8db5840564b44395a9c18bfa325d74251e2 data/minecraft/tags/block/needs_iron_tool.json
+1f64b83173ad2e7bb7a40669c19378c79bf1549a data/ssm_mod/tags/block/incorrect_for_steel_tool.json
+ed9870c2bbead73386d95e29f5525db926cc6eee data/ssm_mod/tags/block/needs_steel_tool.json

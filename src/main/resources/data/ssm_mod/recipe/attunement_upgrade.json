@@ -2,7 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": "minecraft:diamond",
+    "#": "ssm_mod:diamond_shard",
     "S": "ssm_mod:attunement_upgrade",
     "C": "minecraft:sculk"
   },

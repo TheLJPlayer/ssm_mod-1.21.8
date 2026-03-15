@@ -1,0 +1,6 @@
+{
+  "parent": "ssm_mod:item/worn_mask_rabbit",
+  "textures": {
+    "0": "ssm_mod:item/rabbit_mask_defence_on_head"
+  }
+}
